@@ -1178,3 +1178,11 @@ html:has(.gallery:target) { overflow: hidden; }
   .event-list { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; margin-inline: calc(var(--gutter) * -1); padding: 0 var(--gutter) 10px; }
   .event { flex: 0 0 86%; scroll-snap-align: start; }
 }
+
+/* ---------- Preview banner (only seen by a signed-in editor) ---------- */
+.preview-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 400; display: flex; justify-content: space-between; align-items: center; gap: 10px 20px; flex-wrap: wrap; padding: 10px var(--gutter); background: #FFF3C4; border-top: 1px solid #E8D57E; box-shadow: 0 -10px 30px -18px rgba(0, 0, 0, .4); font-size: .85rem; color: var(--aub-ink); }
+.preview-bar form { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.preview-bar a { color: var(--aub); font-weight: 600; }
+.preview-bar__btn { padding: 7px 14px; border-radius: 99px; border: 1px solid rgba(61, 43, 65, .3); background: var(--white); color: var(--aub); font: 600 .78rem var(--sans); cursor: pointer; }
+.preview-bar__btn--go { background: var(--aub); border-color: var(--aub); color: var(--white); }
+body:has(.preview-bar) { padding-bottom: 64px; }
