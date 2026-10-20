@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Page text | Noc &amp; Bez admin</title>
+  <link rel="icon" type="image/png" href="../../assets/img/logo.png">
+  <link rel="stylesheet" href="../../admin/admin.css">
+</head>
+<body class="admin">
+  <div class="demo-bar">Demo of the website editor. Look around freely: nothing can be saved in this preview.</div>
+  <div class="admin-shell">
+    <aside class="admin-side">
+      <a class="admin-brand" href="../../admin/index.html">
+        <img src="../../assets/img/logo.png" alt="Noc and Bez" width="64" height="44">
+        <span>Website editor</span>
+      </a>
+      <nav class="admin-nav" aria-label="Admin">
+        <a href="../../admin/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h7V4H4zM13 20h7v-9h-7zM4 20h7v-5H4zM13 4v5h7V4z"/></svg>Dashboard</a>
+        <a href="../../admin/books/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.5C10 5 7 4.5 4 5v13c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5V5c-3-.5-6 0-8 1.5zM12 6.5v13"/></svg>Books</a>
+        <a href="../../admin/events/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Past events</a>
+        <a href="../../admin/team/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14.8c2 .8 3.2 2.6 3.5 5.2"/></svg>Team</a>
+        <a href="../../admin/text/index.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Page text</a>
+        <a href="../../admin/details/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>Site details</a>
+        <a href="../../admin/account/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Password</a>
+      </nav>
+      <div class="admin-side__foot">
+        <a href="../../index.html" target="_blank" rel="noopener">View live site &nearr;</a>
+      </div>
+    </aside>
+
+    <div class="admin-main">
+      <!-- Publish bar: changes are saved as a draft until Publish -->
+      <div class="publish-bar">
+        <p class="publish-bar__status">
+          <span class="dot"></span>
+          Everything is published. The live site is up to date.        </p>
+        <form class="publish-bar__actions" method="post" action="../../admin/index.html">
+          <input type="hidden" name="csrf" value="demo">          <fieldset disabled>
+            <button class="abtn abtn--ghost" name="do" value="preview">Preview site</button>
+          </fieldset>
+        </form>
+      </div>
+      <main class="admin-content" id="main">
+<div class="page-head">
+  <div>
+    <h1>Page text</h1>
+    <p>The main headings and paragraphs on each page. To show words in <em>italics</em>, wrap them in stars, like <code>*this*</code>. Leave a box empty to go back to the original wording.</p>
+  </div>
+</div>
+
+<nav class="tabs" aria-label="Pages">
+  <a href="../../admin/text/index.html" aria-current="page">Home</a>
+  <a href="../../admin/text/index.html">Project Solutions</a>
+  <a href="../../admin/text/index.html">Publishing &amp; Books</a>
+  <a href="../../admin/text/index.html">The Soil Academy</a>
+  <a href="../../admin/text/index.html">Our Team</a>
+  <a href="../../admin/text/index.html">Contact</a>
+</nav>
+
+<form class="aform" method="post" action="../../admin/text/index.html"><input type="hidden" name="csrf" value="demo"><fieldset disabled>  <input type="hidden" name="page" value="Home">
+  <div class="card">
+    <label class="afield">
+      <span>Main headline, line 1</span>
+      <input type="text" name="home_hero_line1" value="Ideas developed." maxlength="200" placeholder="Ideas developed.">
+    </label>
+    <label class="afield">
+      <span>Main headline, line 2</span>
+      <input type="text" name="home_hero_line2" value="Projects delivered." maxlength="200" placeholder="Projects delivered.">
+    </label>
+    <label class="afield">
+      <span>Main headline, line 3 (in italics)</span>
+      <input type="text" name="home_hero_line3" value="Discovery shared." maxlength="200" placeholder="Discovery shared.">
+    </label>
+    <label class="afield">
+      <span>Introduction under the headline</span>
+      <textarea name="home_hero_copy" rows="4" maxlength="1200" placeholder="Noc &amp; Bez Creative brings together project management support, publishing services and hands-on science education. We help organisations coordinate their projects, support authors in sharing their work and create opportunities to explore the living world beneath our feet.">Noc &amp; Bez Creative brings together project management support, publishing services and hands-on science education. We help organisations coordinate their projects, support authors in sharing their work and create opportunities to explore the living world beneath our feet.</textarea>
+    </label>
+    <label class="afield">
+      <span>Project Solutions card: tagline</span>
+      <input type="text" name="home_card_projects_msg" value="Your Project. Delivered." maxlength="200" placeholder="Your Project. Delivered.">
+    </label>
+    <label class="afield">
+      <span>Project Solutions card: text</span>
+      <textarea name="home_card_projects_text" rows="4" maxlength="1200" placeholder="External project management support to help you plan the work, coordinate people and keep delivery on track.">External project management support to help you plan the work, coordinate people and keep delivery on track.</textarea>
+    </label>
+    <label class="afield">
+      <span>Publishing &amp; Books card: tagline</span>
+      <input type="text" name="home_card_publishing_msg" value="Support for the story you want to share." maxlength="200" placeholder="Support for the story you want to share.">
+    </label>
+    <label class="afield">
+      <span>Publishing &amp; Books card: text</span>
+      <textarea name="home_card_publishing_text" rows="4" maxlength="1200" placeholder="Explore our books and get support with publishing decisions, formatting, Amazon listings and author websites.">Explore our books and get support with publishing decisions, formatting, Amazon listings and author websites.</textarea>
+    </label>
+    <label class="afield">
+      <span>The Soil Academy card: tagline</span>
+      <input type="text" name="home_card_soil_msg" value="Explore. Observe. Discover." maxlength="200" placeholder="Explore. Observe. Discover.">
+    </label>
+    <label class="afield">
+      <span>The Soil Academy card: text</span>
+      <textarea name="home_card_soil_text" rows="4" maxlength="1200" placeholder="Get closer to the living world beneath your feet through hands-on soil science and discovery experiences.">Get closer to the living world beneath your feet through hands-on soil science and discovery experiences.</textarea>
+    </label>
+    <label class="afield">
+      <span>Founder introduction</span>
+      <textarea name="home_founder_copy" rows="4" maxlength="1200" placeholder="Founded by entrepreneur, author and project management professional Bernice Richard, Noc &amp; Bez Creative connects business delivery, creative expression and learning.">Founded by entrepreneur, author and project management professional Bernice Richard, Noc &amp; Bez Creative connects business delivery, creative expression and learning.</textarea>
+    </label>
+    <label class="afield">
+      <span>Closing invitation: heading</span>
+      <input type="text" name="home_closing_title" value="Planning a project, preparing a book or *exploring a learning opportunity?*" maxlength="200" placeholder="Planning a project, preparing a book or *exploring a learning opportunity?*">
+    </label>
+    <label class="afield">
+      <span>Closing invitation: text</span>
+      <input type="text" name="home_closing_copy" value="Tell us what you have in mind." maxlength="200" placeholder="Tell us what you have in mind.">
+    </label>
+  </div>
+  <div class="form-actions">
+    <button class="abtn abtn--primary">Save Home text</button>
+  </div>
+</fieldset></form>      </main>
+    </div>
+  </div>
+</body>
+</html>
