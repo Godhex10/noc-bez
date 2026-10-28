@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Enquiries | Noc &amp; Bez admin</title>
+  <link rel="icon" type="image/png" href="../../assets/img/logo.png">
+  <link rel="stylesheet" href="../../admin/admin.v1793194462.css">
+</head>
+<body class="admin">
+  <div class="demo-bar">Demo of the website editor. Look around freely: nothing can be saved in this preview.</div>
+  <div class="admin-shell">
+    <aside class="admin-side">
+      <a class="admin-brand" href="../../admin/index.html">
+        <img src="../../assets/img/logo.png" alt="Noc and Bez" width="64" height="44">
+        <span>Website editor</span>
+      </a>
+      <nav class="admin-nav" aria-label="Admin">
+        <a href="../../admin/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h7V4H4zM13 20h7v-9h-7zM4 20h7v-5H4zM13 4v5h7V4z"/></svg>Dashboard</a>
+        <a href="../../admin/enquiries/index.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h5l2 3h4l2-3h5"/><path d="M5 5h14l2 8v6H3v-6z"/></svg>Enquiries <b class="nav-count" aria-label="1 new">1</b></a>
+        <a href="../../admin/books/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.5C10 5 7 4.5 4 5v13c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5V5c-3-.5-6 0-8 1.5zM12 6.5v13"/></svg>Books</a>
+        <a href="../../admin/events/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Past events</a>
+        <a href="../../admin/team/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14.8c2 .8 3.2 2.6 3.5 5.2"/></svg>Team</a>
+        <a href="../../admin/text/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Page text</a>
+        <a href="../../admin/details/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>Site details</a>
+        <a href="../../admin/account/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Password</a>
+      </nav>
+      <div class="admin-side__foot">
+        <a href="../../index.html" target="_blank" rel="noopener">View live site &nearr;</a>
+      </div>
+    </aside>
+
+    <div class="admin-main">
+      <!-- Publish bar: changes are saved as a draft until Publish -->
+      <div class="publish-bar">
+        <p class="publish-bar__status">
+          <span class="dot"></span>
+          Everything is published. The live site is up to date.        </p>
+        <form class="publish-bar__actions" method="post" action="../../admin/index.html">
+          <input type="hidden" name="csrf" value="demo">          <fieldset disabled>
+            <button class="abtn abtn--ghost" name="do" value="preview">Preview site</button>
+          </fieldset>
+        </form>
+      </div>
+      <main class="admin-content" id="main">
+<div class="page-head">
+  <div>
+    <h1>Enquiries</h1>
+    <p>Everything sent through the website forms, newest first. Open one to see the answers, reply, and keep track of where it stands. Changes here save straight away.</p>
+  </div>
+  <a class="abtn abtn--ghost" href="../../admin/enquiries/index.html">Download as spreadsheet</a>
+</div>
+
+<nav class="tabs" aria-label="Service">
+  <a href="../../admin/enquiries/index.html" aria-current="page">All <span class="tabs__n">3</span></a>
+  <a href="../../admin/enquiries/index.html">Project &amp; Business Solutions <span class="tabs__n">1</span></a>
+  <a href="../../admin/enquiries/index.html">Publishing <span class="tabs__n">1</span></a>
+  <a href="../../admin/enquiries/index.html">The Soil Academy <span class="tabs__n">1</span></a>
+  <a href="../../admin/enquiries/index.html">General enquiry <span class="tabs__n">0</span></a>
+</nav>
+
+<form class="filter" method="get" action="../../admin/enquiries/index.html">
+    <label>Status
+    <select name="status" onchange="this.form.submit()" disabled>
+      <option value="">Any status</option>
+      <option>New</option>
+      <option>Reviewing</option>
+      <option>Qualified</option>
+      <option>Call booked</option>
+      <option>Proposal sent</option>
+      <option>Won</option>
+      <option>Active</option>
+      <option>Completed</option>
+      <option>Follow-up</option>
+      <option>Not proceeding</option>
+    </select>
+  </label>
+  <noscript><button class="abtn abtn--ghost abtn--sm">Show</button></noscript>
+</form>
+
+<ul class="rows">
+  <li class="row row--lead is-new">
+    <div class="row__thumb row__thumb--round">E</div>
+    <div class="row__main">
+      <a class="row__title" href="../../admin/enquiry-NB-261027-D3M1/index.html">Example Author</a>
+      <p class="row__meta">27 Oct 2026, 2:05 pm &middot; author@example.com</p>
+      <p class="row__tags">
+        <span class="tag tag--status tag--new">New</span>
+        <span class="tag">Publishing</span>
+        <span class="tag tag--soft">Path A: Clarity Session or Author Development Roadmap</span>
+        <span class="tag tag--soft">From: facebook / example ad</span>
+      </p>
+    </div>
+    <div class="row__actions">
+      <a class="abtn abtn--ghost abtn--sm" href="../../admin/enquiry-NB-261027-D3M1/index.html">Open</a>
+    </div>
+  </li>
+  <li class="row row--lead">
+    <div class="row__thumb row__thumb--round">E</div>
+    <div class="row__main">
+      <a class="row__title" href="../../admin/enquiry-NB-261026-D3M2/index.html">Example Organizer</a>
+      <p class="row__meta">26 Oct 2026, 10:20 am &middot; organizer@example.com</p>
+      <p class="row__tags">
+        <span class="tag tag--status tag--call-booked">Call booked</span>
+        <span class="tag">Project &amp; Business Solutions</span>
+        <span class="tag tag--soft">Coordination discovery</span>
+      </p>
+    </div>
+    <div class="row__actions">
+      <a class="abtn abtn--ghost abtn--sm" href="../../admin/enquiry-NB-261026-D3M2/index.html">Open</a>
+    </div>
+  </li>
+  <li class="row row--lead">
+    <div class="row__thumb row__thumb--round">E</div>
+    <div class="row__main">
+      <a class="row__title" href="../../admin/enquiry-NB-261025-D3M3/index.html">Example Teacher</a>
+      <p class="row__meta">25 Oct 2026, 4:45 pm &middot; teacher@example.com</p>
+      <p class="row__tags">
+        <span class="tag tag--status tag--qualified">Qualified</span>
+        <span class="tag">The Soil Academy</span>
+        <span class="tag tag--soft">School / Educator</span>
+      </p>
+    </div>
+    <div class="row__actions">
+      <a class="abtn abtn--ghost abtn--sm" href="../../admin/enquiry-NB-261025-D3M3/index.html">Open</a>
+    </div>
+  </li>
+</ul>
+<p class="note">Enquiries are private: they are never shown on the website. Delete any you no longer need.</p>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
