@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Write a post | Noc &amp; Bez admin</title>
+  <link rel="icon" type="image/png" href="../../assets/img/logo.png">
+  <link rel="stylesheet" href="../../admin/admin.v1793380212.css">
+</head>
+<body class="admin">
+  <div class="demo-bar">Demo of the website editor. Look around freely: nothing can be saved in this preview.</div>
+  <div class="admin-shell">
+    <aside class="admin-side">
+      <a class="admin-brand" href="../../admin/index.html">
+        <img src="../../assets/img/logo.png" alt="Noc and Bez" width="64" height="44">
+        <span>Website editor</span>
+      </a>
+      <nav class="admin-nav" aria-label="Admin">
+        <a href="../../admin/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h7V4H4zM13 20h7v-9h-7zM4 20h7v-5H4zM13 4v5h7V4z"/></svg>Dashboard</a>
+        <a href="../../admin/enquiries/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h5l2 3h4l2-3h5"/><path d="M5 5h14l2 8v6H3v-6z"/></svg>Enquiries <b class="nav-count" aria-label="1 new">1</b></a>
+        <a href="../../admin/books/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.5C10 5 7 4.5 4 5v13c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5V5c-3-.5-6 0-8 1.5zM12 6.5v13"/></svg>Books</a>
+        <a href="../../admin/events/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Past events</a>
+        <a href="../../admin/posts/index.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4l6 6-10 10H4v-6z"/><path d="M12 6l6 6"/></svg>Blog</a>
+        <a href="../../admin/team/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14.8c2 .8 3.2 2.6 3.5 5.2"/></svg>Team</a>
+        <a href="../../admin/text/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Page text</a>
+        <a href="../../admin/details/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>Site details</a>
+        <a href="../../admin/account/index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Password</a>
+      </nav>
+      <div class="admin-side__foot">
+        <a href="../../index.html" target="_blank" rel="noopener">View live site &nearr;</a>
+      </div>
+    </aside>
+
+    <div class="admin-main">
+      <!-- Publish bar: changes are saved as a draft until Publish -->
+      <div class="publish-bar">
+        <p class="publish-bar__status">
+          <span class="dot"></span>
+          Everything is published. The live site is up to date.        </p>
+        <form class="publish-bar__actions" method="post" action="../../admin/index.html">
+          <input type="hidden" name="csrf" value="demo">          <fieldset disabled>
+            <button class="abtn abtn--ghost" name="do" value="preview">Preview site</button>
+          </fieldset>
+        </form>
+      </div>
+      <main class="admin-content" id="main">
+<div class="page-head">
+  <div>
+    <a class="back" href="../../admin/posts/index.html">&larr; All posts</a>
+    <h1>Write a post</h1>
+  </div>
+</div>
+
+
+<form class="aform" method="post" action="../../admin/post-new/index.html" enctype="multipart/form-data"><input type="hidden" name="csrf" value="demo"><fieldset disabled>  <div class="edit-grid">
+    <div class="card">
+      <label class="afield"><span>Title <i>*</i></span>
+        <input type="text" name="title" value="" required maxlength="150">
+              </label>
+
+      <div class="afield-row">
+        <label class="afield"><span>Date <i>*</i></span>
+          <input type="date" name="date" value="2026-10-30" required>
+                    <small class="afield__hint">Shown on the post. Newest posts appear first.</small>
+        </label>
+        <label class="afield"><span>Written by</span>
+          <input type="text" name="author" value="Bernice Richard" maxlength="80" list="team-names">
+          <datalist id="team-names">
+            <option value="Bernice Richard">
+            <option value="Sami Hafeez">
+            <option value="Prince Ebere">
+            <option value="Nathan Onimiya">
+          </datalist>
+          <small class="afield__hint">A team member&rsquo;s name shows their photo under the post.</small>
+        </label>
+      </div>
+
+      <fieldset class="choice">
+        <legend>Topic</legend>
+        <label><input type="radio" name="topic" value="projects"> Project Solutions</label>
+        <label><input type="radio" name="topic" value="publishing"> Publishing &amp; Books</label>
+        <label><input type="radio" name="topic" value="soil"> The Soil Academy</label>
+        <label><input type="radio" name="topic" value="news" checked> News</label>
+        <small class="afield__hint">Readers can filter the blog by topic. The end of each post points to the matching service.</small>
+      </fieldset>
+
+      <label class="afield"><span>Short summary <small>(optional)</small></span>
+        <textarea name="summary" rows="2" maxlength="300"></textarea>
+        <small class="afield__hint">One or two sentences shown on the blog page and in Google. Leave empty to use the start of the post.</small>
+      </label>
+
+      <label class="afield"><span>The post <i>*</i></span>
+        <textarea name="body" rows="22" maxlength="30000" class="post-text"></textarea>
+              </label>
+      <details class="format-help">
+        <summary>How to add headings, lists, bold text and links</summary>
+        <table>
+          <tr><th>Type this</th><th>To get</th></tr>
+          <tr><td>An empty line</td><td>A new paragraph</td></tr>
+          <tr><td><code>## Getting started</code></td><td>A heading (<code>###</code> for a smaller one)</td></tr>
+          <tr><td><code>- First point</code> on each line</td><td>A bulleted list (<code>1.</code> for a numbered list)</td></tr>
+          <tr><td><code>&gt; A quote</code></td><td>A highlighted quote</td></tr>
+          <tr><td><code>**important**</code></td><td><strong>important</strong></td></tr>
+          <tr><td><code>*a book title*</code></td><td><em>a book title</em></td></tr>
+          <tr><td><code>[our books](https://nocnbez.com/publishing/)</code></td><td>A link with the words &ldquo;our books&rdquo;</td></tr>
+        </table>
+      </details>
+    </div>
+
+    <div class="card card--side">
+      <p class="card__label">Main photo <small>(optional)</small></p>
+      <div class="cover-preview cover-preview--wide is-empty">
+        <span>No photo: the topic&rsquo;s colours are shown instead</span>
+      </div>
+      <label class="afield"><span>Upload a photo</span>
+        <input type="file" name="cover" accept="image/jpeg,image/png,image/webp" data-preview>
+                <small class="afield__hint">A wide (landscape) photo works best. JPG, PNG or WebP, up to 8 MB.</small>
+      </label>
+      <label class="afield"><span>Describe the photo <small>(for people who can&rsquo;t see it)</small></span>
+        <input type="text" name="cover_alt" value="" maxlength="200">
+      </label>
+      <hr>
+      <label class="check"><input type="checkbox" name="hidden" value="1"> Hide from visitors <small>(keep working on it)</small></label>
+      <small class="afield__hint">A hidden post stays off the website even after you publish other changes. You can still see it in the preview.</small>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <button class="abtn abtn--primary" name="act" value="save">Save post</button>
+    <button class="abtn abtn--ghost" name="act" value="preview">Save and preview</button>
+    <a class="abtn abtn--ghost" href="../../admin/posts/index.html">Cancel</a>
+  </div>
+</fieldset></form>      </main>
+    </div>
+  </div>
+</body>
+</html>
