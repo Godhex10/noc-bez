@@ -36,6 +36,7 @@
         <li><a href="../publishing/index.html">Publishing &amp; Books</a></li>
         <li><a href="../soil-academy/index.html">The Soil Academy</a></li>
         <li><a href="../our-team/index.html">Our Team</a></li>
+        <li><a href="../blog/index.html" aria-current="page">Blog</a></li>
         <li><a href="../contact/index.html">Contact</a></li>
       </ul>
     </nav>
@@ -50,6 +51,7 @@
           <li><a href="../publishing/index.html">Publishing &amp; Books</a></li>
           <li><a href="../soil-academy/index.html">The Soil Academy</a></li>
           <li><a href="../our-team/index.html">Our Team</a></li>
+          <li><a href="../blog/index.html" aria-current="page">Blog</a></li>
           <li><a href="../contact/index.html">Contact</a></li>
         </ul>
         <a class="btn btn--white" href="../contact/index.html">Contact Us</a>
@@ -69,13 +71,72 @@
   </section>
 
   <section class="blog" aria-label="Posts">
-    <div class="wrap blog-empty">
-      <p>The first posts are on their way. In the meantime, explore what we do:</p>
-      <ul>
-        <li><a class="link-arrow" href="../project-solutions/index.html">Project Solutions <span aria-hidden="true">&rarr;</span></a></li>
-        <li><a class="link-arrow" href="../publishing/index.html">Publishing &amp; Books <span aria-hidden="true">&rarr;</span></a></li>
-        <li><a class="link-arrow" href="../soil-academy/index.html">The Soil Academy <span aria-hidden="true">&rarr;</span></a></li>
-      </ul>
+    <!-- Topic filter: radio buttons and CSS only, so it also works in the plain HTML version -->
+    <input class="blog-filter__input" type="radio" name="topic" id="topic-all" checked>
+    <input class="blog-filter__input" type="radio" name="topic" id="topic-projects">
+    <input class="blog-filter__input" type="radio" name="topic" id="topic-publishing">
+    <input class="blog-filter__input" type="radio" name="topic" id="topic-soil">
+    <input class="blog-filter__input" type="radio" name="topic" id="topic-news">
+    <div class="wrap">
+      <div class="blog-filter" role="group" aria-label="Show posts about">
+        <label for="topic-all">All <span>4</span></label>
+        <label for="topic-projects">Project Solutions <span>1</span></label>
+        <label for="topic-publishing">Publishing &amp; Books <span>1</span></label>
+        <label for="topic-soil">The Soil Academy <span>1</span></label>
+        <label for="topic-news">News <span>1</span></label>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <ol class="post-list">
+        <li class="post-item post-item--lead" data-topic="projects">
+          <a class="post-item__link" href="../blog/sample-how-we-work-on-a-project/index.html">
+            <span class="post-item__media"><span class="post-item__img post-tile post-tile--projects" aria-hidden="true"><span>P</span></span></span>
+            <span class="post-item__text">
+              <span class="post-item__meta">Project Solutions &middot; 31 October 2026 &middot; 1 min read</span>
+              <span class="post-item__title">Sample post: How we work on a project</span>
+              <span class="post-item__summary">From the first conversation to handover: the steps Noc &amp; Bez Project Solutions follows. (Sample post)</span>
+              <span class="post-item__more">Read the post <span aria-hidden="true">&rarr;</span></span>
+            </span>
+          </a>
+        </li>
+        <li class="post-item" data-topic="publishing" data-reveal>
+          <a class="post-item__link" href="../blog/sample-what-publishing-support-covers/index.html">
+            <span class="post-item__media"><span class="post-item__img post-tile post-tile--publishing" aria-hidden="true"><span>P</span></span></span>
+            <span class="post-item__date" aria-hidden="true"><b>29</b>Oct 2026</span>
+            <span class="post-item__text">
+              <span class="post-item__meta">Publishing &amp; Books &middot; 1 min read</span>
+              <span class="post-item__title">Sample post: What publishing support covers</span>
+              <span class="post-item__summary">Publishing involves decisions about your manuscript, book design, platform and readers. Here is where we can help. (Sample post)</span>
+              <span class="post-item__more">Read the post <span aria-hidden="true">&rarr;</span></span>
+            </span>
+          </a>
+        </li>
+        <li class="post-item" data-topic="soil" data-reveal>
+          <a class="post-item__link" href="../blog/sample-what-you-can-explore-at-the-soil-academy/index.html">
+            <span class="post-item__media"><span class="post-item__img post-tile post-tile--soil" aria-hidden="true"><span>T</span></span></span>
+            <span class="post-item__date" aria-hidden="true"><b>27</b>Oct 2026</span>
+            <span class="post-item__text">
+              <span class="post-item__meta">The Soil Academy &middot; 1 min read</span>
+              <span class="post-item__title">Sample post: What you can explore at The Soil Academy</span>
+              <span class="post-item__summary">Soil, its living organisms, textures, layers and water: a look at what a Soil Academy session can explore. (Sample post)</span>
+              <span class="post-item__more">Read the post <span aria-hidden="true">&rarr;</span></span>
+            </span>
+          </a>
+        </li>
+        <li class="post-item" data-topic="news" data-reveal>
+          <a class="post-item__link" href="../blog/sample-welcome-to-the-noc-and-bez-blog/index.html">
+            <span class="post-item__media"><span class="post-item__img post-tile post-tile--news" aria-hidden="true"><span>N</span></span></span>
+            <span class="post-item__date" aria-hidden="true"><b>24</b>Oct 2026</span>
+            <span class="post-item__text">
+              <span class="post-item__meta">News &middot; 1 min read</span>
+              <span class="post-item__title">Sample post: Welcome to the Noc &amp; Bez blog</span>
+              <span class="post-item__summary">Ideas developed. Projects delivered. Discovery shared. A first look at what this blog will cover. (Sample post)</span>
+              <span class="post-item__more">Read the post <span aria-hidden="true">&rarr;</span></span>
+            </span>
+          </a>
+        </li>
+      </ol>
     </div>
   </section>
 </main>
@@ -95,6 +156,7 @@
           <li><a href="../publishing/index.html">Publishing &amp; Books</a></li>
           <li><a href="../soil-academy/index.html">The Soil Academy</a></li>
           <li><a href="../our-team/index.html">Our Team</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
           <li><a href="../contact/index.html">Contact</a></li>
         </ul>
       </div>
